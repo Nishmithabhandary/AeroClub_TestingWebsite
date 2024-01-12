@@ -895,30 +895,29 @@ text-align:center;
         <br>
 
         <script>
-          $(".slider").owlCarousel({
-            loop: true,
-            autoplay: true,
-            autoplayTimeout: 2000, //2000ms = 2s;
-            responsiveClass: true,
-            responsive: {
-              0: {
-                items: 1,
-                nav: true
-              },
-              600: {
-                items: 3,
-                nav: true
-              },
-              1000: {
-                items: 5,
-                nav: true,
-                loop: true
-              }
-            },
-
-            autoplayHoverPause: true,
-          });
-        </script>
+  $(".slider").owlCarousel({
+    loop: false, // Set loop to false
+    autoplay: true,
+    autoplayTimeout: 2000, // 2000ms = 2s;
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 1,
+        nav: true
+      },
+      600: {
+        items: 3,
+        nav: true
+      },
+      1000: {
+        items: 3, // Set to 3 for larger screens
+        nav: true,
+        loop: false // Make sure loop is false for larger screens
+      }
+    },
+    autoplayHoverPause: true,
+  });
+</script>
 
 
     <!-- Evenets comming soon start -->
