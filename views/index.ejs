@@ -46,6 +46,24 @@
   <link href="../css/style.css" rel="stylesheet">
 
 <style>
+.popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
     #footer {
      
       padding: 20px 0;
@@ -346,42 +364,26 @@ text-align:center;
 
         <div class="slider owl-carousel">
 
-          <!-- <div class="card">
-             <div class="img">
-                <img src="assets/img/gururaj.jpg" alt="">
-           
-             </div>
-
-             <div class="content">
-                <div class="name">
-                  <center>Dr. GURURAJ UPADHYAYA</center>
-                </div>
-                <div class="name-description"><center>Associate Professor</center>
-                <div class="name-description"><center>Department of ME<center>                
-                <div class="name-description"><center>NMAMIT</center>
-                  <br>
-                </div>
-                </div>
-                </div>
-             </div>
-          
-            
-            </div> -->
+         
 
           <div class="card">
             <div class="member">
               <div class="member-img">
                 <img src="../img/Vayurvya.jpg" style="height: 314px; width: 466px;" class="img-fluid" alt="">
                 <div class="social">
+  <!-- Replace the <a> tag with a <div> for VAYURVYA -->
+  <div class="vayurvya" onclick="openPopup()">
+    <i class="icofont-linkedin"></i>
+  </div>
+</div>
+<!-- Popup HTML -->
+<div id="popup" class="popup">
+  <span class="close-btn" onclick="closePopup()">&times;</span>
+  <h2>VAYURVYA</h2>
+  <p>10th year anniversary</p>
+  <p><a href="http://www.aeroclubnitte.in/vayurvya">Register now</a></p>
+</div>
 
-                  <a href="https://www.linkedin.com/in/gururaj-upadhyaya-24b24515"><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Dr. Gururaj Upadhyaya</h4>
-                <span>Associate Professor<br>Dept of ME, NMAMIT<br><br><br> </span>
-
-              </div>
             </div>
           </div>
    </div>
@@ -389,6 +391,14 @@ text-align:center;
         <br>
 
         <script>
+ function openPopup() {
+    document.getElementById("popup").style.display = "block";
+  }
+
+  // Function to close the popup
+  function closePopup() {
+    document.getElementById("popup").style.display = "none";
+  }
           $(".slider").owlCarousel({
             loop: true,
             autoplay: true,
@@ -404,7 +414,7 @@ text-align:center;
                 nav: true
               },
               1000: {
-                items: 5,
+                items: 3,
                 nav: true,
                 loop: true
               }
