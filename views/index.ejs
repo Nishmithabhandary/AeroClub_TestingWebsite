@@ -857,7 +857,7 @@ text-align:center;
                 <div class="social">
 
                   
-  <center><h1 style="color: #000000;">Completed!!</h1></center>
+                 <center><h1 style="color: white;">Completed!!</h1></center>
 
                 </div>
               </div>
@@ -874,7 +874,7 @@ text-align:center;
                 <div class="social">
 
                   
-  <center><h1 style="color: #000000;">Completed!!</p></center>
+                 <center><h1 style="color:white;">Completed!!</p></center>
 
                 </div>
               </div>
@@ -891,9 +891,9 @@ text-align:center;
                 <div class="social">
 
                   
- <center>
-  <h1><a href="http://www.aeroclubnitte.in/vayurvya" target="_blank">VAYURVYA</a></h1>
-</center>
+                  <center>
+               <h1><a href="http://www.aeroclubnitte.in/vayurvya" target="_blank">Register Now!!</a></h1>
+               </center>
 
 
                 </div>
@@ -905,30 +905,29 @@ text-align:center;
 
 
         <script>
-          $(".slider").owlCarousel({
-            loop: true,
-            autoplay: true,
-            autoplayTimeout: 2000, //2000ms = 2s;
-            responsiveClass: true,
-            responsive: {
-              0: {
-                items: 1,
-                nav: true
-              },
-              600: {
-                items: 3,
-                nav: true
-              },
-              1000: {
-                items: 3,
-                nav: true,
-                loop: false
-              }
-            },
-
-            autoplayHoverPause: true,
-          });
-        </script>
+  $(".slider").owlCarousel({
+    loop: false, // Set loop to false
+    autoplay: true,
+    autoplayTimeout: 2000, // 2000ms = 2s;
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 1,
+        nav: true
+      },
+      600: {
+        items: 3,
+        nav: true
+      },
+      1000: {
+        items: 3, // Set to 3 for larger screens
+        nav: true,
+        loop: false // Make sure loop is false for larger screens
+      }
+    },
+    autoplayHoverPause: true,
+  });
+</script>
 
 
       </div>
