@@ -43,6 +43,53 @@
   <!-- Template Main CSS File -->
   <link href="../css/style.css" rel="stylesheet">
 <style>
+<style>
+    #footer {
+     
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .left-side,
+    .right-side {
+      flex: 1;
+    }
+
+    .address {
+      text-align: left;
+    }
+
+    .follow-us {
+      text-align: right;
+    }
+
+    .social-icons {
+      margin-top: 10px;
+    }
+
+    .copyright {
+      margin-top: 20px;
+    }
+
+    /* Add your custom colors to social media icons */
+    .facebook i {
+      color: #3b5998; /* Facebook blue color */
+    }
+
+    .instagram i {
+      color: #e4405f; /* Instagram pink color */
+    }
+
+    .linkedin i {
+      color: #0077b5; /* LinkedIn blue color */
+    }
+  </style>
 .whatsapp-link {
   color: #45beff !important;
 }
@@ -1532,25 +1579,40 @@
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer" data-aos-duration="500">
+    <footer id="footer" data-aos-duration="500">
 
     <div class="container">
 
+      <div class="left-side">
+        <div class="address">
+          <p>
+            <strong>AEROCLUB NITTE</strong><br>
+            3rd FLOOR - JNANA SAUDHA<br>
+            NMAMIT, NITTE-574110, INDIA<br>
+            <strong>Email:</strong> aeroclubnitte@nmamit.in
+          </p>
+        </div>
+      </div>
+
+      <div class="right-side">
+        <div class="follow-us">
+          <p><strong>Follow Us</strong></p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/aeroclubnitte/" class="facebook"><i class="bx bxl-facebook bx-sm"></i></a>
+            <a href="https://instagram.com/aeroclubnitte?utm_medium=copy_link" class="instagram"><i class="bx bxl-instagram bx-sm"></i></a>
+            <a href="https://www.linkedin.com/company/aeroclub-nitte" class="linkedin"><i class="bx bxl-linkedin bx-sm"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="container">
       <div class="copyright">
-        <a href="https://www.facebook.com/aeroclubnitte/" class="facebook"><i class="bx bxl-facebook bx-sm"></i></a>
-        <a href="#" class="facebook"><i></i></a>
-
-        <a href="https://instagram.com/aeroclubnitte?utm_medium=copy_link" class="instagram"><i
-            class="bx bxl-instagram bx-sm"></i></a>
-        <a href="#" class="facebook"><i></i></a>
-
-        <a href="https://www.linkedin.com/company/aeroclub-nitte" class="linkedin"><i
-            class="bx bxl-linkedin bx-sm"></i></a>
-        <br>
-        &copy;
-        Copyright <strong><span>Aero Club Nitte</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>Aero Club Nitte</span></strong>. All Rights Reserved
       </div>
     </div>
+
   </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
