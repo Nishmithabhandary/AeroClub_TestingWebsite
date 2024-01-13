@@ -582,7 +582,7 @@ width:100%;
       display: none;
     }
 
-  .container-11 {
+ .container-11 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -593,9 +593,9 @@ width:100%;
 }
 
 .container-11 .card-11 {
-  flex: 1.6;
+  flex: 1.3;
   transition: all 1s ease-in-out;
-  height: 80vmin; /* Set a fixed height */
+  height: 80vmin;
   position: relative;
   overflow: hidden;
 }
@@ -623,13 +623,14 @@ width:100%;
 .container-11 .card-11 img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Use contain to keep the entire image visible */
+  object-fit: cover;
   transition: all 1s ease-in-out;
   filter: grayscale(100%);
 }
 
 .container-11 .card-11:hover img {
-  filter: grayscale(0);
+  filter: none; /* or filter: grayscale(0%); */
+  object-fit: contain;
 }
 
 .container-11 .card-11:hover .card__head-11 {
@@ -648,6 +649,7 @@ width:100%;
 .container_form_sub02 img:hover {
   transform: scale(1.3);
 }
+
 
     @import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
 
