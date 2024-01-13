@@ -597,7 +597,7 @@ width:100%;
   transition: all 1s ease-in-out;
   height: 80vmin;
   position: relative;
-  overflow: hidden; /* Ensure content does not overflow */
+  overflow: hidden;
 }
 
 .container-11 .card-11 .card__head-11 {
@@ -618,12 +618,18 @@ width:100%;
 
 .container-11 .card-11:hover {
   flex-grow: 10;
-  height: auto; /* Allow the height to adjust */
+}
+
+.container-11 .card-11 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 1s ease-in-out;
+  filter: grayscale(100%);
 }
 
 .container-11 .card-11:hover img {
   filter: grayscale(0);
-  height: 100%; /* Set a fixed height */
   object-fit: contain;
 }
 
@@ -634,14 +640,6 @@ width:100%;
   background: rgba(0, 0, 0, 0.5);
   font-size: 2em;
   transform: rotate(0deg) skew(-5deg);
-}
-
-.container-11 .card-11 img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: all 1s ease-in-out;
-  filter: grayscale(100%);
 }
 
 .container-11 .card-11:not(:nth-child(5)) {
