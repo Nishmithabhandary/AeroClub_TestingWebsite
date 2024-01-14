@@ -113,6 +113,33 @@
 .close:hover {
     color: #333;
 }
+.portfolio-info {
+  position: relative;
+  cursor: pointer;
+}
+
+.portfolio-info .tooltip {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 9999;
+  max-width: 800px;
+  max-height: 500px;
+  overflow: auto; /* Allow scrolling when content exceeds the max height */
+}
+
+.portfolio-info:hover .tooltip {
+  display: block;
+  opacity: 1;
+}
+
 
 </style>
 
@@ -250,152 +277,158 @@
 <!-- Activities Section-->
 
   <main id="main">
-    <section class="services">
-      <div class="container_new">
-        <h1 class="section-title" style="font-size: 4vh; color: rgba(1, 1, 66, 0.887);font-style: 'Montserrat' ; ">
-         <b>What do we do?</b> 
-        </h1>
-        <div class="row d-flex">
-
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch flip-card g-3" data-aos="fade-up" data-aos-delay="50">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="../assets/img/RCModelling.jpg " style="display:flexbox; position: relative; height: 42vh; box-shadow: 3vh;">
-                <h2><Center><Strong>RC Aeromodelling</Strong></Center></h2>
-              </div>
-              <div class="flip-card-back">
-                <br>
-                <br>
-                <h2><Center><strong>RC Aeromodelling</strong> </Center></h2>
-                <br>
-                <p class="description">
-              
-                  RC Aeromodelling Workshop offers enthusiasts a hands-on experience in 
-                  constructing and flying radio-controlled model aircraft. Participants learn key principles of aerodynamics,
-                   gain practical skills in assembling RC planes, and enjoy the thrill of piloting their creations.</p>
-              </div>
-
-            </div>
-              </div>
-
-              <div class="col-md-6 col-lg-3 d-flex align-items-stretch flip-card" data-aos="fade-up" data-aos-delay="50">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front">
-                    <img src="../assets/img/Multicopter.jpg " style="display:flexbox; position: relative; height: 42vh; box-shadow: 3vh;">
-                    <h2><Center><strong>Workshop</strong> </Center></h2>
-                  </div>
-                  <div class="flip-card-back">
-                    <br>
-                    <br>
-                    <h2><Center><strong>Multicopter Workshop</strong> </Center></h2>
-                    <br>
-                    <p class="description">
-                      Our Multicopter Workshop provides a hands-on learning experience where participants delve into the construction and operation 
-                      of multicopters, such as drones and quadcopters. Attendees gain practical insights into assembling these aerial vehicles, understanding 
-                      key components like motors and flight controllers. The workshop typically emphasizes flight dynamics and safety, allowing participants to 
-                      fly their own creations and grasp fundamental concepts in drone technology.</p>
-                  </div>
     
+     <section class="portfolio">
+        <div class="container_new">
+          <h1 class="section-title" style="font-size: 4vh; color: rgba(1, 1, 66, 0.887);font-style: 'Montserrat' ; ">
+            <b>What do we do?</b> 
+           </h1>
+          <div class="row portfolio-container" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+    
+            <div class="col-lg-4 col-md-6 filter-app">
+              <div class="portfolio-item">
+                <img src="../img/solarplane.jpg" style="height:315px;" class="img-fluid" alt="">
+                <div class="portfolio-info" data-toggle="tooltip" data-placement="top">
+                  <h3><a href="../img/solarplane.jpg" data-gall="portfolioGallery" class="venobox"
+                      title="App 1"></a></h3>
+                  <a href="../img/solarplane.jpg" data-gall="portfolioGallery" class="venobox"
+                    title="App 1"><b><i class="icofont-square-up"></i></b></a>
+                  <div class="tooltip">
+                    <strong>RC Aeromodelling Workshop</strong><br>
+                    This workshop gives hands on training in building and understanding theory behind Remote-Controlled fixed wing planes. 
                 </div>
+              </div>
+            </div></div>
+
+
+            <div class="col-lg-4 col-md-6 filter-app">
+                <div class="portfolio-item">
+                  <img src="../img/umatis.jpg" style="height:315px;" class="img-fluid" alt="">
+                  <div class="portfolio-info" data-toggle="tooltip" data-placement="top">
+                    <h3><a href="../img/umatis.jpg" data-gall="portfolioGallery" class="venobox"
+                        title="App 1"></a></h3>
+                    <a href="../img/umatis.jpg" data-gall="portfolioGallery" class="venobox"
+                      title="App 1"><b><i class="icofont-square-up"></i></b></a>
+                    <div class="tooltip">
+                      <strong>Multicopter Workshop</strong><br>
+                      A multi-rotor workshop is a hands-on event where participants learn to build and fly their own drones, gaining practical skills in drone assembly and flight operation. It's an ideal introduction to the world of drone technology and offers a fun and educational experience.
+                    </div>
                   </div>
-
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch flip-card" data-aos="fade-up" data-aos-delay="50">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="../assets/img/Multicopter.jpg " style="display:flexbox; position: relative; height: 42vh; box-shadow: 3vh;">
-                <h2><Center><strong>Autonomous UAV Workshop</strong> </Center></h2>
+                </div>
               </div>
-              <div class="flip-card-back">
-                <br>
-                <br>
-                <h2><Center><strong>Autonomous UAV Workshop</strong> </Center></h2>
-                <br>
-                <p class="description">
-                  Our Multicopter Workshop provides a hands-on learning experience where participants delve into the construction and operation 
-                  of multicopters, such as drones and quadcopters. Attendees gain practical insights into assembling these aerial vehicles, understanding 
-                  key components like motors and flight controllers. The workshop typically emphasizes flight dynamics and safety, allowing participants to 
-                  fly their own creations and grasp fundamental concepts in drone technology.</p>
-              </div>
+    
 
-            </div>
-              </div>
+              <div class="col-lg-4 col-md-6 filter-app">
+                <div class="portfolio-item">
+                  <img src="../img/aerial_pesticide_sprayer.jpg" style="height:315px;" class="img-fluid" alt="">
+                  <div class="portfolio-info" data-toggle="tooltip" data-placement="top">
+                    <h3><a href="../img/aerial_pesticide_sprayer.jpg" data-gall="portfolioGallery" class="venobox"
+                        title="App 1"></a></h3>
+                    <a href="../img/aerial_pesticide_sprayer.jpg" data-gall="portfolioGallery" class="venobox"
+                      title="App 1"><b><i class="icofont-square-up"></i></b></a>
+                    <div class="tooltip">
+                      <strong> Autonomous UAV Workshop</strong><br>
+                      This workshop gives hands on experince in building Autonomus UAV. The participants will be working with flight controllers with GPS Modules to achieve autonomus flight.
+                  </div>
+                </div>
+              </div>     </div>
 
 
+    
               
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon-box icon-box-pink">
-              <div class="icon"><i class="bx bxs-plane-land"></i></div><br>
-              <h4 class="title"><a href="">Advanced UAV flying training</a></h4>
+           
 
-              <p class="description">Advanced UAV flying training is a comprehensive process that seamlessly integrates
-                simulations and hands-on field training. This multifaceted approach equips pilots with the necessary
-                skills and expertise to operate UAVs effectively in complex real-world environments.</p>
+             <div class="col-lg-4 col-md-6 filter-app">
+              <div class="portfolio-item">
+                <img src="../img/solarplane.jpg" style="height:315px;" class="img-fluid" alt="">
+                <div class="portfolio-info" data-toggle="tooltip" data-placement="top">
+                  <h3><a href="../img/solarplane.jpg" data-gall="portfolioGallery" class="venobox"
+                      title="App 1"></a></h3>
+                  <a href="../img/solarplane.jpg" data-gall="portfolioGallery" class="venobox"
+                    title="App 1"><b><i class="icofont-square-up"></i></b></a>
+                  <div class="tooltip">
+                    <strong>Adavanced UAV Flying Training</strong><br>
+                    Advanced UAV flying training is a comprehensive process that seamlessly integrates simulations and hands-on field training. This multifaceted approach equips pilots with the necessary skills and expertise to operate UAVs effectively in complex real-world environments.
+                </div>
+              </div>
+            </div>     </div>
 
 
-            </div>
-          </div>
+            <div class="col-lg-4 col-md-6 filter-app">
+                <div class="portfolio-item">
+                  <img src="../img/umatis.jpg" style="height:315px;" class="img-fluid" alt="">
+                  <div class="portfolio-info" data-toggle="tooltip" data-placement="top">
+                    <h3><a href="../img/umatis.jpg" data-gall="portfolioGallery" class="venobox"
+                        title="App 1"></a></h3>
+                    <a href="../img/umatis.jpg" data-gall="portfolioGallery" class="venobox"
+                      title="App 1"><b><i class="icofont-square-up"></i></b></a>
+                    <div class="tooltip">
+                      <strong>National and Zonal Competitions</strong><br>
+                      Participating in national and zonal level competitions offers numerous benefits. Firstly, it provides a platform for individuals to showcase their talents and skills on a broader stage, helping them gain recognition and exposure.
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
 
-          
-          <!-- <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="250">
-            <div class="icon-box icon-box-cyan">
-              <div class="icon"><i class="bx 
-                bxs-rocket"></i></div>
+              <div class="col-lg-4 col-md-6 filter-app">
+                <div class="portfolio-item">
+                  <img src="../img/aerial_pesticide_sprayer.jpg" style="height:315px;" class="img-fluid" alt="">
+                  <div class="portfolio-info" data-toggle="tooltip" data-placement="top">
+                    <h3><a href="../img/aerial_pesticide_sprayer.jpg" data-gall="portfolioGallery" class="venobox"
+                        title="App 1"></a></h3>
+                    <a href="../img/aerial_pesticide_sprayer.jpg" data-gall="portfolioGallery" class="venobox"
+                      title="App 1"><b><i class="icofont-square-up"></i></b></a>
+                    <div class="tooltip">
+                      <strong>Government Funded Projects</strong><br>
+                      Government-funded projects are harnessing the power of innovation by pitching drone solution ideas at various events. This proactive approach aims to address real-life problems through cutting-edge technology, fostering a brighter future for society.
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-              <h4 class="title"><a href="">National & Zonal Level competitions</a></h4>
 
-              <p class="description">Participating in national and zonal level competitions offers numerous benefits.
-                Firstly, it provides a platform for individuals to showcase their talents and skills on a broader stage,
-                helping them gain recognition and exposure.</p>
 
-            </div>
-          </div> -->
-          <!-- <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon-box icon-box-green">
-              <div class="icon"><i class="bx bxs-plane"></i></div>
+              <div class="col-lg-4 col-md-6 filter-app">
+                <div class="portfolio-item">
+                  <img src="../img/aerial_pesticide_sprayer.jpg" style="height:315px;" class="img-fluid" alt="">
+                  <div class="portfolio-info" data-toggle="tooltip" data-placement="top">
+                    <h3><a href="../img/aerial_pesticide_sprayer.jpg" data-gall="portfolioGallery" class="venobox"
+                        title="App 1"></a></h3>
+                    <a href="../img/aerial_pesticide_sprayer.jpg" data-gall="portfolioGallery" class="venobox"
+                      title="App 1"><b><i class="icofont-square-up"></i></b></a>
+                    <div class="tooltip">
+                      <strong>Building Artificial Intelligence System</strong><br>
+                      Building artificial intelligence systems that harness cutting-edge AI solutions in combination with drones presents an innovative approach to efficiently address complex challenges. This synergy empowers us to unlock new possibilities in various domains.
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-              <h4 class="title"><a href="">Government Funded Projects</a></h4>
 
-              <p class="description">Government-funded projects are harnessing the power of innovation by pitching drone
-                solution ideas at various events. This proactive approach aims to address real-life problems through
-                cutting-edge technology, fostering a brighter future for society.</p>
+              <div class="col-lg-4 col-md-6 filter-app">
+                <div class="portfolio-item">
+                  <img src="../img/aerial_pesticide_sprayer.jpg" style="height:315px;" class="img-fluid" alt="">
+                  <div class="portfolio-info" data-toggle="tooltip" data-placement="top">
+                    <h3><a href="../img/aerial_pesticide_sprayer.jpg" data-gall="portfolioGallery" class="venobox"
+                        title="App 1"></a></h3>
+                    <a href="../img/aerial_pesticide_sprayer.jpg" data-gall="portfolioGallery" class="venobox"
+                      title="App 1"><b><i class="icofont-square-up"></i></b></a>
+                    <div class="tooltip">
+                      <strong> Web and App Development</strong><br>
+                      Web and app development is a dynamic field that empowers individuals to create innovative digital solutions. To excel in this industry, one must continually upskill through rigorous learning and hands-on projects to stay at the forefront of technological advancements.
+                  </div>
+                </div>
+              </div>
 
-            </div>
-          </div> -->
-          <!-- <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="350">
-            <div class="icon-box icon-box-blue">
-              <div class="icon"><i class="bx bx-world"></i></div>
-
-            
-
-              <h4 class="title"><a href="">Building Artificial Intelligence Systems</a></h4>
-
-              <p class="description">Building artificial intelligence systems that harness cutting-edge AI solutions in
-                combination with drones presents an innovative approach to efficiently address complex challenges. This
-                synergy empowers us to unlock new possibilities in various domains.</p>
-
-            </div>
-          </div> -->
-
-          <!-- <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
-            <div class="icon-box icon-box-pink">
-              <div class="icon"><i class="bx bx-paper-plane"></i></div>
-
-              <h4 class="title"><a href="">Web and App Development</a></h4>
-
-              <p class="description">Web and app development is a dynamic field that empowers individuals to create
-                innovative digital solutions. To excel in this industry, one must continually upskill through rigorous
-                learning and hands-on projects to stay at the forefront of technological advancements.</p>
-
-            </div>
-          </div> -->
 
         </div>
 
       </div>
-    </section>
-    <!-- End Activities Section -->
+    </section><!-- End Portfolio Section -->
+
+  </main> <!-- End #main -->
+
 
     
     <!-- ======= Why Us Section ======= -->
