@@ -44,79 +44,75 @@
 
   <!-- Template Main CSS File -->
   <link href="../css/style.css" rel="stylesheet">
-  <style>
-    .whatsapp-link {
-      color: #45beff !important;
-    }
+<style>
+.whatsapp-link {
+  color: #45beff !important;
+}
+/* Pop-up styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto; /* Ensure the entire pop-up is scrollable */
+}
 
-    /* Pop-up styles */
-    .popup {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      overflow: auto;
-      /* Ensure the entire pop-up is scrollable */
-    }
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    max-height: 80vh; /* Set a maximum height for the content */
+    overflow-y: auto; /* Make the content scrollable */
+}
 
-    .popup-content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      max-width: 600px;
-      max-height: 80vh;
-      /* Set a maximum height for the content */
-      overflow-y: auto;
-      /* Make the content scrollable */
-    }
+.popup h2 {
+    color: #333;
+}
 
-    .popup h2 {
-      color: #333;
-    }
+.popup p {
+    color: #555;
+}
 
-    .popup p {
-      color: #555;
-    }
+.popup ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
 
-    .popup ul {
-      list-style-type: disc;
-      padding-left: 20px;
-    }
+.popup button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-    .popup button {
-      background-color: #333;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+.popup button:hover {
+    background-color: #555;
+}
 
-    .popup button:hover {
-      background-color: #555;
-    }
+/* Close button style */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #555;
+    cursor: pointer;
+}
 
-    /* Close button style */
-    .close {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      font-size: 20px;
-      color: #555;
-      cursor: pointer;
-    }
-
-    .close:hover {
-      color: #333;
-    }
+.close:hover {
+    color: #333;
+}
 .portfolio-info {
   position: relative;
   cursor: pointer;
@@ -124,9 +120,9 @@
 
 .portfolio-info .tooltip {
   position: relative;
-  bottom: 0; /* Set bottom to 0 */
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, 7px); /* Adjust the second value to set the distance between the image and tooltip */
+  transform: translate(-50%, -50%);
   display: none;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
@@ -136,19 +132,16 @@
   z-index: 9999;
   max-width: 800px;
   max-height: 500px;
-  overflow: auto;
+  overflow: auto; /* Allow scrolling when content exceeds the max height */
 }
-
-
 
 .portfolio-info:hover .tooltip {
   display: block;
   opacity: 1;
-  overflow: auto;
 }
 
- 
-  </style>
+
+</style>
 
 </head>
 
@@ -177,15 +170,13 @@
           <li><a href="/team">Team</a></li>
           <li><a href="/contact">Contact Us</a></li>
           <li><a href="/vayurvya">Vayurvya</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Join Us <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="https://chat.whatsapp.com/FxJah3YRcNlKcBUyrEoWlP" class="whatsapp-link">Aero Club Nitte</a>
-              </li>
-              <li><a href="https://chat.whatsapp.com/JMdz3P5vWl31e6HPgweBZR" class="whatsapp-link">Aero Club Nitte
-                  Alumni</a></li>
-            </ul>
-          </li>
+<li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Join Us <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <li><a href="https://chat.whatsapp.com/FxJah3YRcNlKcBUyrEoWlP" class="whatsapp-link">Aero Club Nitte</a></li>
+      <li><a href="https://chat.whatsapp.com/JMdz3P5vWl31e6HPgweBZR" class="whatsapp-link">Aero Club Nitte Alumni</a></li>
+    </ul>
+  </li>
         </ul>
       </nav><!-- .nav-menu -->
 
@@ -197,16 +188,15 @@
     <div id="heroCarousel" class="container carousel carousel-fade" data-ride="carousel">
 
       <!-- Slide 1 -->
-
+   
       <!-- Slide 2 -->
       <div class="carousel-item active">
-        <div class="carousel-container">
+        <div class="carousel-container" >
           <img src="../assets/img/Vayurvya_Logo.png" style="height: 17vh;">
           <h2 class="animated fadeInDown"></h2>
-          <div class="animated fadeInUp" style="color: black; font-family:'Montserrat'; font-size: 2vh; ">Join the
-            Celebration of a Decade in the Skies : 10th Anniversary<br>
+          <div class="animated fadeInUp" style="color: black; font-family:'Montserrat'; font-size: 2vh; ">Join the Celebration of a Decade in the Skies : 10th Anniversary<br>
             Unleashing Innovation for Tech Enthusiasts!</div>
-          <h2 class="animated fadeInDown"></h2>
+            <h2 class="animated fadeInDown"></h2>
           <a class="btn-get-started scrollto " style="height: 6vh; color: white;" href="/vayurvya">REGISTER</a>
         </div>
       </div>
@@ -223,100 +213,68 @@
 
     </div>
   </section>
-
+  
   <!-- Space !-->
   <h2 class="animated fadeInDown"></h2>
   <h2 class="animated fadeInDown"></h2>
 
   <!--Vision Section-->
   <div class="card text-center">
-    <div id="Welcometitle"
-      style="font-size: 3.5vh; color: rgba(1, 1, 66, 0.887);font-style: 'Montserrat' ; text-align: justify; padding-left: 8.5vh;">
-      <strong>Welcome to Aeroclub Nitte</strong>
+    <div style="font-size: 4vh; color: rgba(1, 1, 66, 0.887);font-style: 'Montserrat' ; text-align: justify; padding-left: 8vh;">
+     <strong>Welcome to Aeroclub Nitte</strong>
     </div>
     <div class="card-body">
-      <p class="card-text" style="font-size: medium; text-align: justify; padding-left: 5vh; padding-right: 5vh;">
-        Established in 2013, it transcended beyond a mere student-led technical club to become a thriving community with
-        a shared passion for conquering the skies. We are more than innovators. We are a hub of excellence, focusing on
-        analysing, fabricating, and testing self-built UAVs that showcase our commitment to cutting-edge technology.
-        At Aeroclub Nitte, we go beyond the realm of machinery. We aspire to nurture a vibrant aviation community that
-        imparts knowledge and skills. As the official aeromodelling team of NMAMIT, we take immense pride in being a
-        testament to the innovative spirit of our institution. Unbounded by geographical limits, we proudly showcase our
-        engineering creativity on the global competition stage, representing NMAMIT as a beacon of ingenuity.<br>
+      <p class="card-text" style="font-size: medium; text-align: justify; padding-left: 7vh; padding-right: 7vh;">Established in 2013, it transcended beyond a mere student-led technical club to become a thriving community with a shared passion for conquering the skies. We are more than innovators. We are a hub of excellence, focusing on analysing, fabricating, and testing self-built UAVs that showcase our commitment to cutting-edge technology.
+        At Aeroclub Nitte, we go beyond the realm of machinery. We aspire to nurture a vibrant aviation community that imparts knowledge and skills.  As the official aeromodelling team of NMAMIT, we take immense pride in being a testament to the innovative spirit of our institution. Unbounded by geographical limits, we proudly showcase our engineering creativity on the global competition stage, representing NMAMIT as a beacon of ingenuity.<br>
         <br>
-        In our pursuit of aeronautical excellence, Aeroclub Nitte is a leading institution in the field of aeronautical
-        excellence. We specialise in crafting elegant and efficient aircraft navigating the skies. Our expertise in
-        Aerodynamics has been recognised in prestigious competitions like the SAE Aero Design Competition and the
-        National Level competition hosted by Boeing in IITs nationwide. We are proud to hold the SAE rank 1 south zone
-        in 2023 in the micro class, which is a testament to our dedication and skills.
-        Rooted within the academic tapestry of NMAMIT, Aeroclub Nitte is more than a club. It is a dynamic collective of
-        passionate individuals committed to pushing the boundaries of engineering and aviation.
-      </p><br>
+        In our pursuit of aeronautical excellence, Aeroclub Nitte is a leading institution in the field of aeronautical excellence. We specialise in crafting elegant and efficient aircraft navigating the skies. Our expertise in Aerodynamics has been recognised in prestigious competitions like the SAE Aero Design Competition and the National Level competition hosted by Boeing in IITs nationwide. We are proud to hold the SAE rank 1 south zone in 2023 in the micro class, which is a testament to our dedication and skills.
+        Rooted within the academic tapestry of NMAMIT, Aeroclub Nitte is more than a club. It is a dynamic collective of passionate individuals committed to pushing the boundaries of engineering and aviation.</p><br>
     </div>
 
 
   </div>
-
-
-  <!-- ======= Why Us Section ======= -->
-  <section class="why-us section-bg" data-aos="fade-up" date-aos-delay="200">
-    <div class="container">
-
-      <div class="row">
-        <div class="col-lg-6 video-box">
-          <img src="../img/Thumbnail.png" style="height: 100%; width: 100%;" class="img-fluid" alt="">
-          <a href="https://youtu.be/fwTKtaPnbeQ?si=i6IpOyfMcaJrK03F" class="venobox play-btn mb-4" data-vbtype="video"
+  
+  
+    <div class="container" style="display:inline-block; padding-left: 10vh;" >
+      <div class="row ">
+        <div class="col-lg-6 video-box g-3">
+          <img src="../img/mask2 (1).jpg" class="img-fluid" alt="">
+          <a href="https://www.youtube.com/embed/69K4ASfNzug" class="venobox play-btn mb-4" data-vbtype="video"
             data-autoplay="true"></a>
-          <!--<iframe width="420" height="315" src="https://www.youtube.com/embed/69K4ASfNzug"></iframe>-->
-
         </div>
-
-        <div class="col-lg-6 d-flex flex-column justify-content-center p-5">
-
-          <div class="icon-box">
-            <div class="icon"><i class="bx bx-fingerprint"></i></div>
-            <h4 class="title"><a href="">VISION</a></h4>
-            <p class="description">To become a leading force in drone technology
+        <br>
+        <div class="col-lg-6 d-flex flex-column justify p-1 ">
+            <h4 class="title"><a href="" style="font-size: 3vh;color: rgba(1, 1, 66, 0.887);">Vision</a></h4>
+            <p class="description" style="font-size: medium;">To become a leading force in drone technology
               and innovation, Aero Club, Nitte envisions
               fostering technical excellence, building a
               vibrant aviation community, and expanding its
               global influence through RC aeromodelling
               workshops, outreach programs, and
               collaboration
-
             </p>
-          </div>
-
-          <div class="icon-box">
-            <div class="icon"><i class="bx bx-gift"></i></div>
-            <h4 class="title"><a href="">MISSION</a></h4>
-            <p class="description">Our mission is to share knowledge and expertise while
+            <br>
+            
+            <h4 class="title"><a href="" style="font-size: 3vh;color: rgba(1, 1, 66, 0.887);">Mission</a></h4>
+            <p class="description" style="font-size: medium;">Our mission is to share knowledge and expertise while
               nurturing a vibrant and influential aviation community, all
               underpinned by our steadfast commitment to excellence as
               we continually inspire and propel our members to achieve
               remarkable success in the aviation realm</p>
-          </div>
-
+         
         </div>
       </div>
-
     </div>
-  </section><!-- End Why Us Section -->
+    <br>
+    <br>
+  
+
+ 
+
+ <!-- End of Vision Section-->
 
 
-
-
-  </div>
-  <br>
-  <br>
-
-
-
-
-  <!-- End of Vision Section-->
-
-
-  <!-- Activities Section-->
+<!-- Activities Section-->
 
   <main id="main">
     
@@ -330,7 +288,7 @@
             <div class="col-lg-4 col-md-6 filter-app">
               <div class="portfolio-item">
                 <img src="../img/solarplane.jpg" style="height:315px;" class="img-fluid" alt="">
-                <div class="portfolio-info" data-toggle="tooltip" data-placement="bottom">
+                <div class="portfolio-info" data-toggle="tooltip" data-placement="top">
                   <h3><a href="../img/solarplane.jpg" data-gall="portfolioGallery" class="venobox"
                       title="App 1"></a></h3>
                   <a href="../img/solarplane.jpg" data-gall="portfolioGallery" class="venobox"
@@ -346,7 +304,7 @@
             <div class="col-lg-4 col-md-6 filter-app">
                 <div class="portfolio-item">
                   <img src="../img/umatis.jpg" style="height:315px;" class="img-fluid" alt="">
-                  <div class="portfolio-info" data-toggle="tooltip" data-placement="">
+                  <div class="portfolio-info" data-toggle="tooltip" data-placement="top">
                     <h3><a href="../img/umatis.jpg" data-gall="portfolioGallery" class="venobox"
                         title="App 1"></a></h3>
                     <a href="../img/umatis.jpg" data-gall="portfolioGallery" class="venobox"
@@ -363,7 +321,7 @@
               <div class="col-lg-4 col-md-6 filter-app">
                 <div class="portfolio-item">
                   <img src="../img/aerial_pesticide_sprayer.jpg" style="height:315px;" class="img-fluid" alt="">
-                  <div class="portfolio-info" data-toggle="tooltip" data-placement="bottom">
+                  <div class="portfolio-info" data-toggle="tooltip" data-placement="top">
                     <h3><a href="../img/aerial_pesticide_sprayer.jpg" data-gall="portfolioGallery" class="venobox"
                         title="App 1"></a></h3>
                     <a href="../img/aerial_pesticide_sprayer.jpg" data-gall="portfolioGallery" class="venobox"
@@ -399,7 +357,7 @@
             <div class="col-lg-4 col-md-6 filter-app">
                 <div class="portfolio-item">
                   <img src="../img/umatis.jpg" style="height:315px;" class="img-fluid" alt="">
-                  <div class="portfolio-info" data-toggle="tooltip" data-placement="bottom">
+                  <div class="portfolio-info" data-toggle="tooltip" data-placement="top">
                     <h3><a href="../img/umatis.jpg" data-gall="portfolioGallery" class="venobox"
                         title="App 1"></a></h3>
                     <a href="../img/umatis.jpg" data-gall="portfolioGallery" class="venobox"
@@ -416,7 +374,7 @@
               <div class="col-lg-4 col-md-6 filter-app">
                 <div class="portfolio-item">
                   <img src="../img/aerial_pesticide_sprayer.jpg" style="height:315px;" class="img-fluid" alt="">
-                  <div class="portfolio-info" data-toggle="tooltip" data-placement="bottom">
+                  <div class="portfolio-info" data-toggle="tooltip" data-placement="top">
                     <h3><a href="../img/aerial_pesticide_sprayer.jpg" data-gall="portfolioGallery" class="venobox"
                         title="App 1"></a></h3>
                     <a href="../img/aerial_pesticide_sprayer.jpg" data-gall="portfolioGallery" class="venobox"
@@ -434,7 +392,7 @@
               <div class="col-lg-4 col-md-6 filter-app">
                 <div class="portfolio-item">
                   <img src="../img/aerial_pesticide_sprayer.jpg" style="height:315px;" class="img-fluid" alt="">
-                  <div class="portfolio-info" data-toggle="tooltip" data-placement="bottom">
+                  <div class="portfolio-info" data-toggle="tooltip" data-placement="top">
                     <h3><a href="../img/aerial_pesticide_sprayer.jpg" data-gall="portfolioGallery" class="venobox"
                         title="App 1"></a></h3>
                     <a href="../img/aerial_pesticide_sprayer.jpg" data-gall="portfolioGallery" class="venobox"
@@ -451,7 +409,7 @@
               <div class="col-lg-4 col-md-6 filter-app">
                 <div class="portfolio-item">
                   <img src="../img/aerial_pesticide_sprayer.jpg" style="height:315px;" class="img-fluid" alt="">
-                  <div class="portfolio-info" data-toggle="tooltip" data-placement="bottom">
+                  <div class="portfolio-info" data-toggle="tooltip" data-placement="top">
                     <h3><a href="../img/aerial_pesticide_sprayer.jpg" data-gall="portfolioGallery" class="venobox"
                         title="App 1"></a></h3>
                     <a href="../img/aerial_pesticide_sprayer.jpg" data-gall="portfolioGallery" class="venobox"
@@ -472,13 +430,17 @@
   </main> <!-- End #main -->
 
 
+    
+    <!-- ======= Why Us Section ======= -->
+    <!-- End Why Us Section -->
+
+
     <!-- Activities section-->
 
     <section class="why-us section-bg" data-aos="fade-up" date-aos-delay="400">
       <div class="container_new">
         <br>
-        <h1 class="section-title"
-          style="font-size: 4vh; color: rgba(1, 1, 66, 0.887);font-style: 'Montserrat' ; text-align: justify; padding-left: 8vh;">
+        <h1 class="section-title" style="font-size: 4vh; color: rgba(1, 1, 66, 0.887);font-style: 'Montserrat' ; text-align: justify; padding-left: 8vh;">
           <center><b>Our pillars of support</b></center>
         </h1>
 
@@ -553,7 +515,7 @@
               </div>
             </div>
           </div>
-
+    
           <div class="card">
             <div class="member">
               <div class="member-img">
@@ -670,8 +632,7 @@
     <!-- Evenets comming soon start -->
     <section id="new_event" class="services">
       <div class="container_new" data-aos="fade-up" data-aos-delay="100">
-        <h1 class="section-title"
-          style="font-size: 4vh; color: rgba(1, 1, 66, 0.887);font-style: 'Montserrat' ; text-align: justify; padding-left: 8vh;">
+        <h1 class="section-title" style="font-size: 4vh; color: rgba(1, 1, 66, 0.887);font-style: 'Montserrat' ; text-align: justify; padding-left: 8vh;">
           <center><b>Events</b></center>
         </h1>
 
@@ -690,16 +651,13 @@
                     <h1 style="color: rgba(1, 1, 66, 0.887); font-size: 3vh;"><b> Vayurvya</b></h1>
                   </div>
                   <br>
-
-                  <h1 class="title" style="color: #45beff;"><a href="/vayurvya"><b style="color: #45beff;">Register here
-                      </b></a></h1>
+                 
+                  <h1 class="title" style="color: #45beff;"><a href="/vayurvya"><b style="color: #45beff;">Register here </b></a></h1>
 
                   <p class="description">
-                    Our mission is to shine a spotlight on and express gratitude for the remarkable achievements,
-                    innovations,
-                    and valuable contributions orchestrated by Aeroclub-Nitte over its decade-long stewardship in
-                    hosting a
-                    national-level technical competition. </p>
+                    Our mission is to shine a spotlight on and express gratitude for the remarkable achievements, innovations, 
+                    and valuable contributions orchestrated by Aeroclub-Nitte over its decade-long stewardship in hosting a
+                     national-level technical competition. </p>
                 </div>
               </div>
             </div>
@@ -713,12 +671,11 @@
                   <div>
                     <h4 style="color: rgba(1, 1, 66, 0.887); font-size: 3vh;"><b>RC Aeromodelling<br> Workshop</b></h4>
                   </div>
-
+                
                   <br>
                   <h4 class="title"><a href="#"><b>Completed!</b></a></h4>
 
-                  <p class="description">Embark on an eagerly anticipated workshop! Seize the opportunity to craft your
-                    own chuck RC planes and witness the thrill as your creation takes flight</p>
+                  <p class="description">Embark on an eagerly anticipated workshop! Seize the opportunity to craft your own chuck RC planes and witness the thrill as your creation takes flight</p>
                 </div>
               </div>
             </div>
@@ -731,18 +688,17 @@
                   </div>
                   <br>
                   <h4 class="title"><a
-                      href="https://docs.google.com/forms/d/e/1FAIpQLSf6oWYc5YvGR0JyTSa6AaS6uU4xtFI51aUz7YZghJ_jxzmGzQ/viewform"><b>Completed!</b></a>
-                  </h4>
+                      href="https://docs.google.com/forms/d/e/1FAIpQLSf6oWYc5YvGR0JyTSa6AaS6uU4xtFI51aUz7YZghJ_jxzmGzQ/viewform"><b>Completed!</b></a></h4>
 
                   <p class="description">Craft, Fly, Explore: Quadcopter Workshop Experience </p>
                 </div>
               </div>
             </div>
           </a>
+          
 
 
-
-
+         
 
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-right" data-aos-delay="100">
@@ -772,139 +728,125 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-lg-5" style="text-align: left; padding-top: 5vh;">
+        <div class="col-lg-5" style="text-align: left; padding-top: 5vh;"> 
           <h2>Address</h2>
-          Aeroclub Nitte<br>
-          NMAM Institute of Technology<br>
-          3rd Floor Jnana Saudha<br>
-          Karkala , Udupi<br>
-          Karnataka<br>
-          Pin Code - 574110<br>
-          +91 9113589277
-
-        </div>
-
-        <div class="col-lg-5 smedia" style="text-align: right;padding-top: 9vh;">
-
-          <a href="https://www.facebook.com/aeroclubnitte/" class="facebook" style="color: white;"><i
-              class="bx bxl-facebook bx-sm"></i> Facebook</a><br>
-          <a href="#" class="facebook"><i></i></a>
-
-          <a href="https://instagram.com/aeroclubnitte?utm_medium=copy_link" class="instagram" style="color: white;"><i
-              class="bx bxl-instagram bx-sm"></i> Instagram</a>
-          <a href="#" class="facebook"><i></i></a><br>
-
-          <a href="https://www.linkedin.com/company/aeroclub-nitte" class="linkedin" style="color: white;"><i
-              class="bx bxl-linkedin bx-sm"></i> linkedin</a><br>
-          <br>
-        </div>
+           Aeroclub Nitte<br>
+           NMAM Institute of Technology<br>
+           3rd Floor Jnana Saudha<br>
+           Karkala , Udupi<br>
+           Karnataka<br>
+           Pin Code - 574110<br>
+           +91 9113589277
+    
+            </div>
+    
+            <div class="col-lg-5 smedia" style="text-align: right;padding-top: 9vh;">
+             
+              <a href="https://www.facebook.com/aeroclubnitte/" class="facebook" style="color: white;"><i class="bx bxl-facebook bx-sm"></i>       Facebook</a><br>
+              <a href="#" class="facebook"><i></i></a>
+      
+              <a href="https://instagram.com/aeroclubnitte?utm_medium=copy_link" class="instagram" style="color: white;"><i
+                  class="bx bxl-instagram bx-sm"></i>       Instagram</a>
+              <a href="#" class="facebook"><i></i></a><br>
+      
+              <a href="https://www.linkedin.com/company/aeroclub-nitte" class="linkedin" style="color: white;"><i
+                  class="bx bxl-linkedin bx-sm"></i>       linkedin</a><br>
+              <br>
+            </div>
       </div>
+        
 
 
 
+        <div class="copyright" style="text-align: center;">
+        &copy; Copyright <strong><span>Aero Club Nitte</span></strong>. All Rights Reserved | <a href="javascript:void(0);" onclick="openPrivacyPolicyPopup()" style="color: blue; text-decoration: underline;">Privacy Policy</a>
+      </div> 
 
-      <div class="copyright" style="text-align: center;">
-        &copy; Copyright <strong><span>Aero Club Nitte</span></strong>. All Rights Reserved | <a
-          href="javascript:void(0);" onclick="openPrivacyPolicyPopup()"
-          style="color: blue; text-decoration: underline;">Privacy Policy</a>
-      </div>
-
-
+      
     </div>
-
-
-  </footer>
+      
+    
+    </footer>
   <!-- End Footer -->
-  <!-- Privacy Policy Pop-up -->
-  <div id="privacyPolicyPopup" class="popup">
+<!-- Privacy Policy Pop-up -->
+<div id="privacyPolicyPopup" class="popup">
     <div class="popup-content">
-      <span class="close" onclick="closePrivacyPolicyPopup()">&times;</span>
-      <h2>Privacy Policy</h2>
-      <p><strong>Effective Date:</strong> 13-01-2024</p>
-      <p>
-        At Aeroclub Nitte, we are committed to protecting your privacy and ensuring the security of your personal
-        information.
-        This Privacy Policy outlines how we collect, use, share, and safeguard the information you provide using our
-        website.
-      </p><br>
-      <h3>Information We Collect:</h3>
-      <p>
-        When you visit our website or engage with us, we may collect the following types of information:
-      </p>
-      <ul>
-        <li><strong>Personal Information:</strong> Name, contact information (email address, phone number), and any
-          other information you voluntarily provide.</li>
-        <li><strong>Usage Information:</strong> We may collect information about how you interact with our website,
-          including IP addresses, browser types, and browsing patterns.</li>
-      </ul>
-      <br>
-      <h3>How We Use Your Information:</h3>
-      <p>
-        We will use the information we collect for the following purposes:
-      </p>
-      <ul>
-        <li>To contact you about our events and activities.</li>
-        <li>To improve our website and enhance user experience.</li>
-        <li>To communicate with you regarding updates, newsletters, and other relevant information.</li>
-      </ul>
-      <br>
-      <h3>Sharing Your Information:</h3>
-      <p>
-        We may share your information with our partners, who may contact you about their products and services. However,
-        we will not sell, trade, or rent your personal information to third parties for marketing purposes.
-      </p>
-      <br>
-      <h3>Your Consent:</h3>
-      <p>
-        By providing your information to Aeroclub Nitte, you consent to collecting, using, and sharing your information
-        as described in this Privacy Policy.
-      </p>
-      <br>
-      <h3>Security:</h3>
-      <p>
-        We take reasonable measures to protect the information you provide to us from unauthorized access or disclosure.
-        However, no data transmission over the Internet can be guaranteed to be completely secure, and we cannot ensure
-        or warrant the security of any information you transmit to us.
-      </p>
-      <br>
-      <h3>Your Choices:</h3>
-      <p>
-        You can opt out of receiving communications from us or our partners. If you wish, please contact us at
-        aeroclubnitte@nmamit.in
-      </p>
-      <br>
-      <h3>Changes to the Privacy Policy:</h3>
-      <p>
-        We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated
-        effective date.
-      </p>
-      <br>
-      <h3>Contact Us:</h3>
-      <p>
-        If you have any questions or concerns about our Privacy Policy, please contact us at aeroclubnitte@nmamit.in.
-      </p>
-      <br>
-      <p>
-        Thank you for trusting Aeroclub Nitte with your information. We are dedicated to maintaining your privacy and
-        providing a secure and enjoyable online experience.
-      </p>
-      <br>
-
+        <span class="close" onclick="closePrivacyPolicyPopup()">&times;</span>
+        <h2>Privacy Policy</h2>
+        <p><strong>Effective Date:</strong> 13-01-2024</p>
+        <p>
+            At Aeroclub Nitte, we are committed to protecting your privacy and ensuring the security of your personal information.
+            This Privacy Policy outlines how we collect, use, share, and safeguard the information you provide using our website.
+        </p><br>
+        <h3>Information We Collect:</h3>
+        <p>
+            When you visit our website or engage with us, we may collect the following types of information:
+        </p>
+        <ul>
+            <li><strong>Personal Information:</strong> Name, contact information (email address, phone number), and any other information you voluntarily provide.</li>
+            <li><strong>Usage Information:</strong> We may collect information about how you interact with our website, including IP addresses, browser types, and browsing patterns.</li>
+        </ul>
+<br>
+        <h3>How We Use Your Information:</h3>
+        <p>
+            We will use the information we collect for the following purposes:
+        </p>
+        <ul>
+            <li>To contact you about our events and activities.</li>
+            <li>To improve our website and enhance user experience.</li>
+            <li>To communicate with you regarding updates, newsletters, and other relevant information.</li>
+        </ul>
+<br>
+        <h3>Sharing Your Information:</h3>
+        <p>
+            We may share your information with our partners, who may contact you about their products and services. However, we will not sell, trade, or rent your personal information to third parties for marketing purposes.
+        </p>
+<br>
+        <h3>Your Consent:</h3>
+        <p>
+            By providing your information to Aeroclub Nitte, you consent to collecting, using, and sharing your information as described in this Privacy Policy.
+        </p>
+<br>
+        <h3>Security:</h3>
+        <p>
+            We take reasonable measures to protect the information you provide to us from unauthorized access or disclosure. However, no data transmission over the Internet can be guaranteed to be completely secure, and we cannot ensure or warrant the security of any information you transmit to us.
+        </p>
+<br>
+        <h3>Your Choices:</h3>
+        <p>
+            You can opt out of receiving communications from us or our partners. If you wish, please contact us at aeroclubnitte@nmamit.in
+        </p>
+<br>
+        <h3>Changes to the Privacy Policy:</h3>
+        <p>
+            We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date.
+        </p>
+<br>
+        <h3>Contact Us:</h3>
+        <p>
+            If you have any questions or concerns about our Privacy Policy, please contact us at aeroclubnitte@nmamit.in.
+        </p>
+<br>
+        <p>
+            Thank you for trusting Aeroclub Nitte with your information. We are dedicated to maintaining your privacy and providing a secure and enjoyable online experience.
+        </p>
+  <br>      
+       
     </div>
-  </div>
+</div>
 
-  <!-- JavaScript code for the privacy policy pop-up functionality -->
-  <script>
+<!-- JavaScript code for the privacy policy pop-up functionality -->
+<script>
     // Function to open the privacy policy pop-up
     function openPrivacyPolicyPopup() {
-      document.getElementById('privacyPolicyPopup').style.display = 'block';
+        document.getElementById('privacyPolicyPopup').style.display = 'block';
     }
 
     // Function to close the privacy policy pop-up
     function closePrivacyPolicyPopup() {
-      document.getElementById('privacyPolicyPopup').style.display = 'none';
+        document.getElementById('privacyPolicyPopup').style.display = 'none';
     }
-  </script>
+</script>
 
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
