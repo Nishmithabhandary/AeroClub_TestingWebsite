@@ -101,6 +101,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     background-color: #555;
 }
 
+.portfolio-info {
+  position: relative;
+  cursor: pointer;
+}
+
+.portfolio-info .tooltip {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 9999;
+  max-width: 800px;
+  overflow-y: auto;
+  max-height: 500px;
+  overflow: hidden; /* Prevent scrolling behind the tooltip */
+}
+
+.portfolio-info:hover .tooltip {
+  display: block;
+  opacity: 1;
+}
+
 
 .whatsapp-link {
   color: #45beff !important;
