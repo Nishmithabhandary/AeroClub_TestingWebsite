@@ -48,71 +48,74 @@
 .whatsapp-link {
   color: #45beff !important;
 }
-/* Pop-up styles */
-.popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    overflow: auto; /* Ensure the entire pop-up is scrollable */
-}
+ /* Pop-up styles */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      overflow: auto;
+      /* Ensure the entire pop-up is scrollable */
+    }
 
-.popup-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    max-width: 600px;
-    max-height: 80vh; /* Set a maximum height for the content */
-    overflow-y: auto; /* Make the content scrollable */
-}
+    .popup-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      max-width: 600px;
+      max-height: 80vh;
+      /* Set a maximum height for the content */
+      overflow-y: auto;
+      /* Make the content scrollable */
+    }
 
-.popup h2 {
-    color: #333;
-}
+    .popup h2 {
+      color: #333;
+    }
 
-.popup p {
-    color: #555;
-}
+    .popup p {
+      color: #555;
+    }
 
-.popup ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
+    .popup ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
 
-.popup button {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+    .popup button {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
 
-.popup button:hover {
-    background-color: #555;
-}
+    .popup button:hover {
+      background-color: #555;
+    }
 
-/* Close button style */
-.close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    color: #555;
-    cursor: pointer;
-}
+    /* Close button style */
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 20px;
+      color: #555;
+      cursor: pointer;
+    }
 
-.close:hover {
-    color: #333;
-}
+    .close:hover {
+      color: #333;
+    }
 .portfolio-info {
   position: relative;
   cursor: pointer;
@@ -120,9 +123,9 @@
 
 .portfolio-info .tooltip {
   position: relative;
-  top: 50%;
+  bottom: 0; /* Set bottom to 0 */
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 7px); /* Adjust the second value to set the distance between the image and tooltip */
   display: none;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
@@ -132,13 +135,18 @@
   z-index: 9999;
   max-width: 800px;
   max-height: 500px;
-  overflow: auto; /* Allow scrolling when content exceeds the max height */
+  overflow: auto;
 }
+
+
 
 .portfolio-info:hover .tooltip {
   display: block;
   opacity: 1;
+  overflow: auto;
 }
+
+ 
 
 
 </style>
@@ -276,7 +284,7 @@
 
 <!-- Activities Section-->
 
-  <main id="main">
+ <main id="main">
     
      <section class="portfolio">
         <div class="container_new">
@@ -288,7 +296,7 @@
             <div class="col-lg-4 col-md-6 filter-app">
               <div class="portfolio-item">
                 <img src="../img/solarplane.jpg" style="height:315px;" class="img-fluid" alt="">
-                <div class="portfolio-info" data-toggle="tooltip" data-placement="top">
+                <div class="portfolio-info" data-toggle="tooltip" data-placement="bottom">
                   <h3><a href="../img/solarplane.jpg" data-gall="portfolioGallery" class="venobox"
                       title="App 1"></a></h3>
                   <a href="../img/solarplane.jpg" data-gall="portfolioGallery" class="venobox"
@@ -304,7 +312,7 @@
             <div class="col-lg-4 col-md-6 filter-app">
                 <div class="portfolio-item">
                   <img src="../img/umatis.jpg" style="height:315px;" class="img-fluid" alt="">
-                  <div class="portfolio-info" data-toggle="tooltip" data-placement="top">
+                  <div class="portfolio-info" data-toggle="tooltip" data-placement="">
                     <h3><a href="../img/umatis.jpg" data-gall="portfolioGallery" class="venobox"
                         title="App 1"></a></h3>
                     <a href="../img/umatis.jpg" data-gall="portfolioGallery" class="venobox"
@@ -321,7 +329,7 @@
               <div class="col-lg-4 col-md-6 filter-app">
                 <div class="portfolio-item">
                   <img src="../img/aerial_pesticide_sprayer.jpg" style="height:315px;" class="img-fluid" alt="">
-                  <div class="portfolio-info" data-toggle="tooltip" data-placement="top">
+                  <div class="portfolio-info" data-toggle="tooltip" data-placement="bottom">
                     <h3><a href="../img/aerial_pesticide_sprayer.jpg" data-gall="portfolioGallery" class="venobox"
                         title="App 1"></a></h3>
                     <a href="../img/aerial_pesticide_sprayer.jpg" data-gall="portfolioGallery" class="venobox"
@@ -357,7 +365,7 @@
             <div class="col-lg-4 col-md-6 filter-app">
                 <div class="portfolio-item">
                   <img src="../img/umatis.jpg" style="height:315px;" class="img-fluid" alt="">
-                  <div class="portfolio-info" data-toggle="tooltip" data-placement="top">
+                  <div class="portfolio-info" data-toggle="tooltip" data-placement="bottom">
                     <h3><a href="../img/umatis.jpg" data-gall="portfolioGallery" class="venobox"
                         title="App 1"></a></h3>
                     <a href="../img/umatis.jpg" data-gall="portfolioGallery" class="venobox"
@@ -374,7 +382,7 @@
               <div class="col-lg-4 col-md-6 filter-app">
                 <div class="portfolio-item">
                   <img src="../img/aerial_pesticide_sprayer.jpg" style="height:315px;" class="img-fluid" alt="">
-                  <div class="portfolio-info" data-toggle="tooltip" data-placement="top">
+                  <div class="portfolio-info" data-toggle="tooltip" data-placement="bottom">
                     <h3><a href="../img/aerial_pesticide_sprayer.jpg" data-gall="portfolioGallery" class="venobox"
                         title="App 1"></a></h3>
                     <a href="../img/aerial_pesticide_sprayer.jpg" data-gall="portfolioGallery" class="venobox"
@@ -392,7 +400,7 @@
               <div class="col-lg-4 col-md-6 filter-app">
                 <div class="portfolio-item">
                   <img src="../img/aerial_pesticide_sprayer.jpg" style="height:315px;" class="img-fluid" alt="">
-                  <div class="portfolio-info" data-toggle="tooltip" data-placement="top">
+                  <div class="portfolio-info" data-toggle="tooltip" data-placement="bottom">
                     <h3><a href="../img/aerial_pesticide_sprayer.jpg" data-gall="portfolioGallery" class="venobox"
                         title="App 1"></a></h3>
                     <a href="../img/aerial_pesticide_sprayer.jpg" data-gall="portfolioGallery" class="venobox"
@@ -409,7 +417,7 @@
               <div class="col-lg-4 col-md-6 filter-app">
                 <div class="portfolio-item">
                   <img src="../img/aerial_pesticide_sprayer.jpg" style="height:315px;" class="img-fluid" alt="">
-                  <div class="portfolio-info" data-toggle="tooltip" data-placement="top">
+                  <div class="portfolio-info" data-toggle="tooltip" data-placement="bottom">
                     <h3><a href="../img/aerial_pesticide_sprayer.jpg" data-gall="portfolioGallery" class="venobox"
                         title="App 1"></a></h3>
                     <a href="../img/aerial_pesticide_sprayer.jpg" data-gall="portfolioGallery" class="venobox"
