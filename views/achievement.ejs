@@ -31,6 +31,104 @@
 .whatsapp-link {
   color: #45beff !important;
 }
+/* Pop-up styles */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      overflow: auto;
+      /* Ensure the entire pop-up is scrollable */
+    }
+
+    .popup-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      max-width: 600px;
+      max-height: 80vh;
+      /* Set a maximum height for the content */
+      overflow-y: auto;
+      /* Make the content scrollable */
+    }
+
+    .popup h2 {
+      color: #333;
+    }
+
+    .popup p {
+      color: #555;
+    }
+
+    .popup ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    .popup button {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .popup button:hover {
+      background-color: #555;
+    }
+
+    /* Close button style */
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 20px;
+      color: #555;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #333;
+    }
+.portfolio-info {
+  position: relative;
+  cursor: pointer;
+}
+
+.portfolio-info .tooltip {
+  position: relative;
+  bottom: 0; /* Set bottom to 0 */
+  left: 50%;
+  transform: translate(-50%, 7px); /* Adjust the second value to set the distance between the image and tooltip */
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 9999;
+  max-width: 800px;
+  max-height: 500px;
+  overflow: auto;
+}
+
+
+
+.portfolio-info:hover .tooltip {
+  display: block;
+  opacity: 1;
+  overflow: auto;
+}
+
 </style>
 
 </head>
@@ -110,12 +208,13 @@
                   </div>
       
                   <div class="col-md-6 pt-5">
-                    <h1><strong>Boeing IIT National Aeromodelling Competition Madras </strong></h1>
+                    <h1><strong>Boeing IIT National Aeromodelling Competition </strong></h1>
                     <p >Aeroclub Nitte has left an indelible mark in the prestigious Boeing IIT National Aeromodelling competition
                          during the current academic year 2023-2024. Our exceptional journey unfolded at the Zonals 
                          held in IIT Mumbai and IIT Madras, with notable achievements in both arenas.<br><br>
                      
                             IIT Mumbai - 3rd Position<br>
+                            IIT Madras - 1st Position<br>
                             IIT Madras - 2nd Position<br><br>
                           
                           This remarkable achievement not only solidifies our presence but has also propelled three of our teams to qualify for the finals. It underscores Aeroclub Nitte's 
@@ -647,10 +746,39 @@
       
                   <div class="col-md-5 ">
       
+                    <div>
+                      <img src="../img/wrightflight2.jpg" style="width: 600px; height: 350px;" class="img-fluid rounded"
+                        alt="">
+                    </div>
+                  </div>
+      
+      
+      
+                  <div class="col-md-6 pt-5">
+                    <h3><strong>Wright Flight</strong></h3>
+                    <p class=>
+                        In the challenging domain of the Wright Flight Technical Aeromodelling and Flying Competition at NITK Surathkal,
+                         our team showcased remarkable precision in executing maneuvers and aerial stunts.
+                          Overcoming obstacles with finesse, we are thrilled to announce our team's triumph in securing the prestigious Rank 
+                          1 in the event. This noteworthy accomplishment not only highlights our technical 
+                          prowess but also emphasizes our unwavering commitment to excellence in aeromodelling. 
+                          It is a source of immense pride for the entire team, symbolizing our dedication and achievements in this dynamic field.
+                    </p>
+                    
+                </div>
+                </div>
+              </div>
+
+               <div class="give-padding">
+                <div class="row" data-aos="fade-right" data-aos-delay="100">
+      
+                  <div class="col-md-5 ">
+      
                     <div class="img-blur">
                       <img src="../img/saeddc.jpg" style="width: 600px;" class="img-fluid rounded" alt="">
                     </div>
                   </div>
+                 
       
                   <div class="col-md-6 pt-5">
                     <h1><strong>SAE drone design Competition </strong></h1>
@@ -678,7 +806,7 @@
               </div>
   
               <div class="col-md-6 pt-4">
-                <h1>Boeing IIT National Aeromodelling </h1>
+                <h1><strong>Boeing IIT National Aeromodelling Competition</strong> </h1>
                 <p >
                     The year 2022-2023 stands as a momentous chapter for the Aeroclub, embodying our
                      steadfast commitment encapsulated in the mantra, "if it's about skies, then it's always about us." 5 Team have participated in zonals held at 
@@ -709,7 +837,7 @@
               </div>
   
               <div class="col-md-6 pt-5">
-                <h3>Cognizance</h3>
+                <h3><strong>Cognizance</strong></h3>
                 <p>
                     Two of our teams participated in the technical festival of IIT Roorkee, showcasing their skills in the Aeromodelling and Multirotor competitions named Flight Fury and AerooHelix, respectively. Both teams demonstrated outstanding capabilities, 
                     securing notable positions in their respective events. This accomplishment adds another feather to the cap of our club, further glorifying our
@@ -748,7 +876,7 @@
                       </div>
           
                       <div class="col-md-6 pt-5">
-                        <h3>SAE Aerodesign Challenge</h3>
+                        <h3><strong>SAE Aerodesign Challenge</strong></h3>
                         <p>AIR 2</p>
                         <p >
                             Enduring 10 months of unwavering commitment during the challenges posed by the COVID times, our team of 7 students 
@@ -759,34 +887,6 @@
         
                         </p>
                       </div>
-                    </div>
-                  </div>
-
-                  <div class="give-padding">
-                    <div class="row" data-aos="fade-right" data-aos-delay="100">
-          
-                      <div class="col-md-5 ">
-          
-                        <div>
-                          <img src="../img/wrightflight2.jpg" style="width: 600px; height: 350px;" class="img-fluid rounded"
-                            alt="">
-                        </div>
-                      </div>
-          
-          
-          
-                      <div class="col-md-6 pt-5">
-                        <h3>Wright Flight</h3>
-                        <p class=>
-                            In the challenging domain of the Wright Flight Technical Aeromodelling and Flying Competition at NITK Surathkal,
-                             our team showcased remarkable precision in executing maneuvers and aerial stunts.
-                              Overcoming obstacles with finesse, we are thrilled to announce our team's triumph in securing the prestigious Rank 
-                              1 in the event. This noteworthy accomplishment not only highlights our technical 
-                              prowess but also emphasizes our unwavering commitment to excellence in aeromodelling. 
-                              It is a source of immense pride for the entire team, symbolizing our dedication and achievements in this dynamic field.
-                        </p>
-                        
-                    </div>
                     </div>
                   </div>
 
@@ -802,12 +902,12 @@
                       </div>
           
                       <div class="col-md-6 pt-5">
-                        <h3>Aerophilia</h3>
+                        <h3><strong>Aerophilia</strong></h3>
                         <p >
                             This is a distinguished National-level Techno-Cultural fest held at Sahyadri College,
                              serves as a platform for students aspiring to achieve the extraordinary. The event, 
                              featuring multiple maneuvers and challenges, witnessed our team's exceptional skills, 
-                             overcoming obstacles and securing consecutive 1st and 2nd places in the competition. 
+                             overcoming obstacles and securing  2nd and 3rd places in the competition. 
                              This triumph not only upholds our tradition of excellence but also reaffirms our 
                              commitment to pushing boundaries and achieving remarkable feats in the dynamic world
                               of aviation and technology.
@@ -818,6 +918,37 @@
                
     
     
+
+                  <div class="give-padding">
+                    <div class="row" data-aos="fade-right" data-aos-delay="100">
+          
+                      <div class="col-md-5 ">
+          
+                        <div>
+                          <img src="../img/wrightflight.jpg" style="width: 600px; height: 350px;" class="img-fluid rounded"
+                            alt="">
+                        </div>
+                      </div>
+          
+          
+          
+                      <div class="col-md-6 pt-5">
+                        <h3><strong>Wright Flight</strong></h3>
+                        <p class=>
+                            In the challenging domain of the Wright Flight Technical Aeromodelling and Flying Competition at NITK Surathkal,
+                             our team showcased remarkable precision in executing maneuvers and aerial stunts.
+                              Overcoming obstacles with finesse, we are thrilled to announce our team's triumph in securing the prestigious Ranks
+                              2nd and 3rd in the event. This noteworthy accomplishment not only highlights our technical 
+                              prowess but also emphasizes our unwavering commitment to excellence in aeromodelling. 
+                              It is a source of immense pride for the entire team, symbolizing our dedication and achievements in this dynamic field.
+                        </p>
+                        
+                    </div>
+                    </div>
+                  </div>
+
+
+                  
               
  
                 </div>
@@ -892,7 +1023,7 @@
                   </div>
       
                   <div class="col-md-6 pt-4">
-                    <h1>Boeing IIT National Aeromodelling </h1>
+                    <h1><strong>Boeing IIT National Aeromodelling Competition</strong> </h1>
                     <p >
                         A dynamic team comprising entirely first-year engineering students, after undergoing rigorous training for four months, 
                         showcased their skills at the Boeing IIT National Aeromodelling competition held in IIT Kharagpur. 
@@ -924,51 +1055,136 @@
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
+
   <footer id="footer" data-aos-duration="500">
 
     <div class="container">
       <div class="row">
-        <div class="col-lg-5" style="text-align: left; padding-top: 5vh;"> 
+        <div class="col-lg-5" style="text-align: left; padding-top: 5vh;">
           <h2>Address</h2>
-           Aeroclub Nitte<br>
-           NMAM Institute of Technology<br>
-           3rd Floor Jnana Saudha<br>
-           Karkala , Udupi<br>
-           Karnataka<br>
-           Pin Code - 574110<br>
-           +91 9113589277
-    
-            </div>
-    
-            <div class="col-lg-5 smedia" style="text-align: right;padding-top: 9vh;">
-             
-              <a href="https://www.facebook.com/aeroclubnitte/" class="facebook" style="color: white;"><i class="bx bxl-facebook bx-sm"></i>       Facebook</a><br>
-              <a href="#" class="facebook"><i></i></a>
-      
-              <a href="https://instagram.com/aeroclubnitte?utm_medium=copy_link" class="instagram" style="color: white;"><i
-                  class="bx bxl-instagram bx-sm"></i>       Instagram</a>
-              <a href="#" class="facebook"><i></i></a><br>
-      
-              <a href="https://www.linkedin.com/company/aeroclub-nitte" class="linkedin" style="color: white;"><i
-                  class="bx bxl-linkedin bx-sm"></i>       linkedin</a><br>
-              <br>
-            </div>
+          Aeroclub Nitte<br>
+          NMAM Institute of Technology<br>
+          3rd Floor Jnana Saudha<br>
+          Karkala, Udupi<br>
+          Karnataka<br>
+          Pin Code - 574110<br>
+          +91 9113589277
+        </div>
+  
+        <div class="col-lg-7 smedia" style="text-align: right; padding-top: 9vh;">
+          <a href="https://www.facebook.com/aeroclubnitte/" class="facebook" style="color: white;"><i
+              class="bx bxl-facebook bx-sm"></i> Facebook</a><br>
+          <a href="https://instagram.com/aeroclubnitte?utm_medium=copy_link" class="instagram"
+            style="color: white;"><i class="bx bxl-instagram bx-sm"></i> Instagram</a><br>
+          <a href="https://www.linkedin.com/company/aeroclub-nitte" class="linkedin"
+            style="color: white;"><i class="bx bxl-linkedin bx-sm"></i> LinkedIn</a><br>
+        </div>
       </div>
-        
-
-
-
-        <div class="copyright" style="text-align: center;">
-        &copy;
-        Copyright <strong><span>Aero Club Nitte</span></strong>. All Rights Reserved
-      </div> 
-
-      
+  
+      <div class="row">
+        <div class="col-lg-12" style="text-align: center;">
+          <div class="copyright">
+            &copy; Copyright <strong><span>Aero Club Nitte</span></strong>. All Rights Reserved | <a
+              href="javascript:void(0);" onclick="openPrivacyPolicyPopup()"
+              style="color: blue; text-decoration: underline;">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
     </div>
-      
-    
-    </footer>
+  </footer>
+  
 
+  <!-- End Footer -->
+  <!-- Privacy Policy Pop-up -->
+  <div id="privacyPolicyPopup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePrivacyPolicyPopup()">&times;</span>
+      <h2>Privacy Policy</h2>
+      <p><strong>Effective Date:</strong> 13-01-2024</p>
+      <p>
+        At Aeroclub Nitte, we are committed to protecting your privacy and ensuring the security of your personal
+        information.
+        This Privacy Policy outlines how we collect, use, share, and safeguard the information you provide using our
+        website.
+      </p><br>
+      <h3>Information We Collect:</h3>
+      <p>
+        When you visit our website or engage with us, we may collect the following types of information:
+      </p>
+      <ul>
+        <li><strong>Personal Information:</strong> Name, contact information (email address, phone number), and any
+          other information you voluntarily provide.</li>
+        <li><strong>Usage Information:</strong> We may collect information about how you interact with our website,
+          including IP addresses, browser types, and browsing patterns.</li>
+      </ul>
+      <br>
+      <h3>How We Use Your Information:</h3>
+      <p>
+        We will use the information we collect for the following purposes:
+      </p>
+      <ul>
+        <li>To contact you about our events and activities.</li>
+        <li>To improve our website and enhance user experience.</li>
+        <li>To communicate with you regarding updates, newsletters, and other relevant information.</li>
+      </ul>
+      <br>
+      <h3>Sharing Your Information:</h3>
+      <p>
+        We may share your information with our partners, who may contact you about their products and services. However,
+        we will not sell, trade, or rent your personal information to third parties for marketing purposes.
+      </p>
+      <br>
+      <h3>Your Consent:</h3>
+      <p>
+        By providing your information to Aeroclub Nitte, you consent to collecting, using, and sharing your information
+        as described in this Privacy Policy.
+      </p>
+      <br>
+      <h3>Security:</h3>
+      <p>
+        We take reasonable measures to protect the information you provide to us from unauthorized access or disclosure.
+        However, no data transmission over the Internet can be guaranteed to be completely secure, and we cannot ensure
+        or warrant the security of any information you transmit to us.
+      </p>
+      <br>
+      <h3>Your Choices:</h3>
+      <p>
+        You can opt out of receiving communications from us or our partners. If you wish, please contact us at
+        aeroclubnitte@nmamit.in
+      </p>
+      <br>
+      <h3>Changes to the Privacy Policy:</h3>
+      <p>
+        We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated
+        effective date.
+      </p>
+      <br>
+      <h3>Contact Us:</h3>
+      <p>
+        If you have any questions or concerns about our Privacy Policy, please contact us at aeroclubnitte@nmamit.in.
+      </p>
+      <br>
+      <p>
+        Thank you for trusting Aeroclub Nitte with your information. We are dedicated to maintaining your privacy and
+        providing a secure and enjoyable online experience.
+      </p>
+      <br>
+
+    </div>
+  </div>
+
+  <!-- JavaScript code for the privacy policy pop-up functionality -->
+  <script>
+    // Function to open the privacy policy pop-up
+    function openPrivacyPolicyPopup() {
+      document.getElementById('privacyPolicyPopup').style.display = 'block';
+    }
+
+    // Function to close the privacy policy pop-up
+    function closePrivacyPolicyPopup() {
+      document.getElementById('privacyPolicyPopup').style.display = 'none';
+    }
+  </script>
   <!-- End Footer -->
 
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
