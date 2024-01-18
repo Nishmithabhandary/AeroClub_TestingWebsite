@@ -387,6 +387,17 @@ h6,
     left: 0;
     /* transform: translate(-50%, -50%); */
 }
+@media (max-width: 768px) {
+   #hero .carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    top: 0;
+   }
+}
 
 #hero h2 {
     color: #fff;
