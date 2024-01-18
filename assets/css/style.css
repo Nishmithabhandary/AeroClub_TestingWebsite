@@ -429,21 +429,23 @@ h6,
 }
 
 #hero .btn-get-started {
-    font-family: "Montserrat ";
+    font-family: "Montserrat";
     font-weight: 500;
     font-size: 20px;
     letter-spacing: 1px;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center; /* Align vertically center */
+    justify-content: center; /* Align horizontally center */
     padding: 18px 25px;
     border-radius: 40px;
     transition: 0.5s;
-    line-height: 1;
     margin: 0;
     color: #fff;
     -webkit-animation-delay: 0.8s;
     animation-delay: 0.8s;
     background-color: rgba(1, 1, 66, 0.887);
 }
+
 
 #hero .btn-get-started:hover {
     background: #1179f9;
