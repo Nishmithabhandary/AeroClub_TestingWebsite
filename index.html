@@ -2077,7 +2077,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
                   function playAnimation() {
                       const currentItem = sponsorItems[currentIndex];
-                      currentItem.style.animation = 'fadeInOut 1s forwards';
+                      currentItem.style.animation = 'fadeInOut 2s forwards';
           
                       // Move to the next item or reset to the first item
                       currentIndex = (currentIndex + 1) % totalItems;
@@ -2086,7 +2086,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       setTimeout(() => {
                           currentItem.style.animation = 'none'; // Reset animation
                           playAnimation();
-                      }, 1000);
+                      }, 2000);
                   }
           
                   // Start the animation loop
