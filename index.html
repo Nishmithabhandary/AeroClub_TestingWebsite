@@ -755,13 +755,14 @@ width:100%;
       color: white;
     }
 
-     .button-10a a:hover {
+    .button-10a a:hover {
       color:white;
       background:rgba(1, 1, 66, 0.887);
       border-radius: 3px;
       box-shadow: 0 0 10px rgba(1, 1, 66, 0.887), 0 0 40px rgba(1, 1, 66, 0.887), 0 0 80px rgba(1, 1, 66, 0.887);
       transition-delay: 600ms;
     }
+
     .button-10a a span {
       position: absolute;
       display: block;
@@ -1626,8 +1627,68 @@ width:100%;
     .box a {
       text-decoration: none; /* Remove underline */
     }
+    
+    
+    #sponsors-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Set the container height to the full viewport height */
+            position: relative;
+        }
 
+        .sponsor-item {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0; /* Initially set opacity to 0 */
+            text-align: center;
+        }
+
+        .sponsor-item img {
+            max-width: 100%; /* Ensure images don't exceed their container width */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* Adjust the width of the 4th image */
+        .sponsor-item:nth-child(4) {
+            width: 40%; /* Set the width as needed (percentage or fixed value) */
+            max-width: 400px; /* Add a max-width if desired */
+        }
+
+        /* Add a title container below the image */
+        .sponsor-title {
+            
+            color: white;
+            padding: 8px;
+            box-sizing: border-box;
+            font-family: Montserrat;
+            font-weight: bold;
+          font-size: 20px;
+        }
+
+        /* Add animation styles */
+        @keyframes fadeInOut {
+            0% {
+                opacity: 0;
+            }
+            25% {
+                opacity: 1;
+            }
+            75% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        
   </style>
+   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+   <!-- Include Owl Carousel CSS and JS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 </head>
 
 <body>
@@ -1675,6 +1736,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <li><span style="font-family: 'Public Sans', sans-serif;">About us</span></li>
               <li><span style="font-family: 'Public Sans', sans-serif;">Guests</span></li>
               <li><span style="font-family: 'Public Sans', sans-serif;">Events</span></li>
+              <li><span style="font-family: 'Public Sans', sans-serif;">Sponsors</span></li>
               <li><span style="font-family: 'Public Sans', sans-serif;">Contact Us</span></li>
             </ul>
           </nav>
@@ -1924,6 +1986,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <!-- EventsSection -->
 
+
             <li class="l-section section">
 
               <div class="hire">
@@ -1967,6 +2030,68 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             </li>
             <!-- end eventSection -->
+
+
+
+            <!--Sponsors Section-->
+             <!-- ResourcePersons -->
+             <li class="l-section section">
+              <div class="work">
+
+                <div id="sponsors-container" class="owl-carousel">
+                  <!-- Add your sponsor logos and titles here -->
+                  <div class="sponsor-item">
+                      <img src="./assets/img/nitte.png" alt="Sponsor 1" class="sponsor-logo">
+                      <div class="sponsor-title">Title Sponsors</div>
+                  </div>
+          
+                  <div class="sponsor-item">
+                      <img src="./assets/img/sae_aerospace.png" alt="Sponsor 2" class="sponsor-logo">
+                      <div class="sponsor-title"></div>
+                  </div>
+          
+                  <div class="sponsor-item">
+                      <img src="./assets/img/sae_banglore.png" alt="Sponsor 3" class="sponsor-logo">
+                      <div class="sponsor-title"></div>
+                  </div>
+          
+                  <div class="sponsor-item">
+                      <img src="./assets/img/dark_matter.png" alt="Sponsor 4" class="sponsor-logo">
+                      <div class="sponsor-title">Tech Sponsors</div>
+                  </div>
+          
+                  <div class="sponsor-item">
+                      <img src="./assets/img/maverik.jpg" alt="Sponsor 5" class="sponsor-logo">
+                      <div class="sponsor-title">Merchandise sponsor</div>
+                  </div>
+              </div>
+          
+              <script>
+                  // JavaScript to handle the animation sequence
+                  const sponsorsContainer = document.getElementById('sponsors-container');
+                  const sponsorItems = document.querySelectorAll('.sponsor-item');
+                  const totalItems = sponsorItems.length;
+                  let currentIndex = 0;
+          
+                  function playAnimation() {
+                      const currentItem = sponsorItems[currentIndex];
+                      currentItem.style.animation = 'fadeInOut 1s forwards';
+          
+                      // Move to the next item or reset to the first item
+                      currentIndex = (currentIndex + 1) % totalItems;
+          
+                      // Set a delay for the next item
+                      setTimeout(() => {
+                          currentItem.style.animation = 'none'; // Reset animation
+                          playAnimation();
+                      }, 1000);
+                  }
+          
+                  // Start the animation loop
+                  playAnimation();
+              </script></div></li>
+             
+<!-- end of sponsors section-->
 
 
           <!-- ContactUs section -->
@@ -2092,6 +2217,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li>About</li>
       <li>Guests</li>
       <li>Events</li>
+      <li>Sponsors</li>
       <li>Contact Us</li>
     </ul> 
   </div></div>
