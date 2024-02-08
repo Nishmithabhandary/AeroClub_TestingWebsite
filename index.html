@@ -1757,7 +1757,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   </h1> -->
                   <img src="assets/img/3-removebg-preview.png" class="naut" style="height: 460px;" alt="Welcome">
 
-                  <h2>The event starts in</h2>
+                  <h1>Event is Live Now!!</h1>
                   <!-- countdownClock -->
                   <div class="container-10022">
 
@@ -2275,45 +2275,52 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </script>
     
 
-  <script>
-    // Target date (9th February 2024)
-    //const targetDate = new Date(new Date().getFullYear(), 1, 9).getTime();
-	  // Create a new Date object for the current year, February 5th at 11:30 AM
-const targetDate = new Date(new Date().getFullYear(), 1, 5, 11, 30).getTime();
-
-
-
-    // Update the countdown every second
-    let timer = setInterval(function () {
-      // Get today's date and time
-      const now = new Date().getTime();
-
-      // Calculate the remaining time
-      const remainingTime = targetDate - now;
-
-      if (remainingTime > 0) {
-        // Calculate days, hours, minutes, and seconds
-        const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
-
-        // Display the countdown
-        document.getElementById("timer").innerHTML =
-          "<div class=\"days\"> \
-        <div class=\"numbers\">" + days + "</div>days</div> \
-        <div class=\"hours\"> \
-        <div class=\"numbers\">" + hours + "</div>hours</div> \
-        <div class=\"minutes\"> \
-        <div class=\"numbers\">" + minutes + "</div>minutes</div> \
-        <div class=\"seconds\"> \
-        <div class=\"numbers\">" + seconds + "</div>seconds</div>";
-      } else {
-        clearInterval(timer);
-        document.getElementById("timer").innerHTML = "Countdown is over!";
-      }
-    }, 1000);
-  </script>
+   <script>
+      // Target date (5th February 2024 at 11:30 AM)
+      const targetDate = new Date(new Date().getFullYear(), 1, 5, 11, 30).getTime();
+    
+      // Update the countdown every second
+      let timer = setInterval(function () {
+        // Get today's date and time
+        const now = new Date().getTime();
+    
+        // Calculate the remaining time
+        const remainingTime = targetDate - now;
+    
+        if (remainingTime > 0) {
+          // Calculate days, hours, minutes, and seconds
+          const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+    
+          // Display the countdown
+          document.getElementById("timer").innerHTML =
+            "<div class=\"days\"> \
+            <div class=\"numbers\">" + days + "</div>days</div> \
+            <div class=\"hours\"> \
+            <div class=\"numbers\">" + hours + "</div>hours</div> \
+            <div class=\"minutes\"> \
+            <div class=\"numbers\">" + minutes + "</div>minutes</div> \
+            <div class=\"seconds\"> \
+            <div class=\"numbers\">" + seconds + "</div>seconds</div>";
+        } else {
+          clearInterval(timer);
+          
+          // Remove the countdown timer
+          document.getElementById("timer").innerHTML = "";
+    
+          // // Display "Event is live now!!" with styling
+          // const liveNowElement = document.createElement("h2");
+          // liveNowElement.innerHTML = "Event is live now!!";
+          // liveNowElement.style.color = "white";
+          // liveNowElement.style.fontSize = "24px";
+          // liveNowElement.style.fontWeight = "700";
+          // document.getElementById("timer").appendChild(liveNowElement);
+        }
+      }, 1000);
+    </script>
+    
 
   <script>
     function myFunction() {
