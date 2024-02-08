@@ -2386,9 +2386,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class=\"seconds\"> \
         <div class=\"numbers\">" + seconds + "</div>seconds</div>";
       } else {
-        clearInterval(timer);
-        document.getElementById("timer").innerHTML = "Countdown is over!";
-      }
+  clearInterval(timer);
+  const timerElement = document.getElementById("timer");
+  timerElement.innerHTML = "<div style='font-size: 18px; font-weight: bold;'>Event is Live Now!</div>";
+}
     }, 1000);
   </script>
 
