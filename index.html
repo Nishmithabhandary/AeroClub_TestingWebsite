@@ -1062,10 +1062,10 @@ width:100%;
 
    
 
-/*       .intro h2 {
+      .intro h2 {
         display: none;
       }
- */
+ 
       .container-10022 #timer {
         margin-top: 50% !important;
         margin-left: -17%;
@@ -2311,12 +2311,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           document.getElementById("timer").innerHTML = "";
     
           // // Display "Event is live now!!" with styling
-          // const liveNowElement = document.createElement("h2");
-          // liveNowElement.innerHTML = "Event is live now!!";
-          // liveNowElement.style.color = "white";
-          // liveNowElement.style.fontSize = "24px";
-          // liveNowElement.style.fontWeight = "700";
-          // document.getElementById("timer").appendChild(liveNowElement);
+          const liveNowElement = document.createElement("h2");
+          liveNowElement.innerHTML = "Event is live now!!";
+          liveNowElement.style.color = "white";
+          liveNowElement.style.fontSize = "24px";
+          liveNowElement.style.fontWeight = "700";
+          document.getElementById("timer").appendChild(liveNowElement);
         }
       }, 1000);
     </script>
